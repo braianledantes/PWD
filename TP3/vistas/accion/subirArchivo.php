@@ -4,8 +4,8 @@ include '../../control/Archivo.php';
 include '../../utils/funciones.php';
 
 $data = data_submitted();
-$archivo = new Archivo();
-$respuesta = $archivo->subirArchivo($data);
+$archivo = new Archivo($data);
+$respuesta = $archivo->subirArchivo();
 
 ?>
 
