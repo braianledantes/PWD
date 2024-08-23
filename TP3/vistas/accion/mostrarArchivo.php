@@ -22,9 +22,11 @@ $contenido = $archivo->obtenerContenidoTxt();
         <div class="" style="width: 600px; max-width: 600px;">
             <h2>Contenido del archivo</h2>
             <div class="p-3 border rounded bg-body-secondary">
-                <p>
-                    <?php echo $contenido ?>
-                </p>
+                <form>
+                    <div class="input-group">
+                        <textarea class="form-control" style="height: 500px;" aria-label="With textarea"><?= $contenido ?></textarea>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
