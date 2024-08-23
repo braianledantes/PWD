@@ -23,16 +23,17 @@ class Archivo
 
     public function subirArchivo()
     {
-        $respuesta = "";
+        // devuelve la ruta del archivo subido
+        $respuesta = null;
+
         $archivo = $this->files['archivo'];
+        $rutaArticulo = $this->dir . $archivo['name'];
 
         if ($archivo['error'] <= 0) {
             $respuesta = "1";
-            if (!copy($archivo['tmp_name'], $this->dir . $archivo['name'])) {
-                $respuesta = "0";
+            if (!copy($archivo['tmp_name'], $rutaArticulo)) {
+                $respuesta = $rutaArticulo;
             }
-        } else {
-            $respuesta = "-1";
         }
 
         return $respuesta;
