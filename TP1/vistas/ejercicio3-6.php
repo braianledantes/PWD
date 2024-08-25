@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>TP1 | Ejercicio 3</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    <title>TP1 | Ejercicio 3-6</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 
 <body>

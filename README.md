@@ -1,4 +1,4 @@
-# TRABAJOS PRÁCTICOS EVALUATIVOS TP1, TP2, TP3
+# TRABAJOS PRÁCTICOS EVALUATIVOS TP1, TP2 Y TP3
 
 # Programacion Web Dinamica 2024
 - Tecnicatura Universitaria en Desarrollo Web

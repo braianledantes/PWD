@@ -14,7 +14,7 @@
     </header>
     <section>
     <div class="accordion" id="accordionExample">
-<!--Trabajo Practico No 1-->
+<!--Trabajo Practico Numero 1-->
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -24,19 +24,16 @@
     <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <ul class="list-group">
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 1</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 2</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 3</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 4</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 5</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 6</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 7</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 8</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP1/vistas/ejercicio1.php">Ejercicio 1</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP1/vistas/ejercicio2.php">Ejercicio 2</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP1/vistas/ejercicio3-6.php">Ejercicio 3 al 6</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP1/vistas/ejercicio7.php">Ejercicio 7</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP1/vistas/ejercicio8.php">Ejercicio 8</a></li>
         </ul>
       </div>
     </div>
   </div>
-<!--Trabajo Practico No 2-->
+<!--Trabajo Practico Numero 2-->
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -46,15 +43,13 @@
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <ul class="list-group">
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 1</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 2</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 3</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 4</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio3.php">Ejercicio 3</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio4.php">Ejercicio 4</a></li>
         </ul>
       </div>
     </div>
   </div>
-<!--Trabajo Practico No 3-->
+<!--Trabajo Practico Numero 3-->
   <div class="accordion-item">
     <h2 class="accordion-header">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -65,8 +60,8 @@
       <div class="accordion-body">
         <ul class="list-group">
             <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 1</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 2</a></li>
-            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio1.php">Ejercicio 3</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio2.php">Ejercicio 2</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="TP3/vistas/ejercicio3.php">Ejercicio 3</a></li>
         </ul>
       </div>
     </div>
