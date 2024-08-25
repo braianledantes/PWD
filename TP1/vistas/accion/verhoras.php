@@ -5,8 +5,6 @@ $horas = [
     'miercoles' => $_GET['miercoles'],
     'jueves' => $_GET['jueves'],
     'viernes' => $_GET['viernes'],
-    'sabado' => $_GET['sabado'],
-    'domingo' => $_GET['domingo']
 ];
 
 $total = array_sum($horas);
@@ -18,15 +16,16 @@ $total = array_sum($horas);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver horas por semana</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <title>Carga Horaria por Semana</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <div class="contenido">
-        <h2>Resultado:</h2>
-        <div class="resultado">
+        <h2>Horas de Cursada</h2>
+        <div class="resultado" style="background-color:beige;">
             <table style="width: 100%; text-align:center;">
                 <thead>
                     <tr>

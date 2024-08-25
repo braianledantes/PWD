@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-secondary">
-    <div class="container">
+    <div class="container" style="margin-top:150px;">
         <div class="row justify-content-center mt-3">
             <div class="col" style="max-width: 400px;">
                 <form class="container bg-white border rounded shadow p-4" action="accion/verificarPass.php" method="post">

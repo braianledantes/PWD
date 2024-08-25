@@ -16,7 +16,6 @@
             <div class="consigna p-3 border rounded bg-body-secondary mb-3">
                 <h2>Ejercicio 1</h2>
                 <p>Crear un formulario que permita subir un archivo. En la página que procesa la información se debe mostrar un mensaje que indique si el archivo fue subido correctamente o no.</p>
-
             </div>
 
             

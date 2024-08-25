@@ -11,7 +11,10 @@ $password = $_POST['password'];
 
 // verifica si el usuario existe y si la contraseña es correcta
 if ($usuarios->login($username, $password)) {
-    echo "<h1>Welcome $username</h1>";
+    echo "<h1> Welcome $username</h1>";
 } else {
     echo 'Login failed';
 }
+
+?>
+
