@@ -4,7 +4,6 @@ require_once '../../control/Archivo.php';
 require_once '../../control/Peliculas.php';
 
 $data = data_submitted();
-// print_r($data);
 
 $archivo = new Archivo($data);
 $pelicula = new Pelicula();
@@ -21,12 +20,23 @@ $duracion = $_POST['duracion'] ?? '';
 $edad = $_POST['edad'] ?? '';
 
 $urlImagen = $archivo->subirArchivo();
-echo $urlImagen;
 
+$resultado = $pelicula->crearPelicula(
+    $titulo,
+    $actores,
+    $director,
+    $guion,
+    $produccion,
+    $anio,
+    $nacionalidad,
+    $genero,
+    $duracion,
+    $edad,
+    $urlImagen
+);
 
-
-
-$resultado = $pelicula->crearPelicula($titulo, $actores, $director, $guion, $produccion, $anio, $nacionalidad, $genero, $duracion, $edad);
+// eliminina el archivo de data
+unset($data['archivo']);
 
 ?>
 
@@ -36,7 +46,7 @@ $resultado = $pelicula->crearPelicula($titulo, $actores, $director, $guion, $pro
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 4 | TP2</title>
+    <title>TP3 | Ejercicio 3 | Accion</title>
 
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -52,6 +62,7 @@ $resultado = $pelicula->crearPelicula($titulo, $actores, $director, $guion, $pro
                     <strong><?= $key ?></strong>: <?= $value ?><br>
                 <?php endforeach; ?>
             </p>
+            <img src="<?= $urlImagen ?>" width="200">
         </div>
     </div>
 

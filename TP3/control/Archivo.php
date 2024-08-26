@@ -27,13 +27,11 @@ class Archivo
         $respuesta = null;
 
         $archivo = $this->files['archivo'];
-        $rutaArticulo = $this->dir . $archivo['name'];
+        $fileName = $this->files['archivo']['name'];
+        $ruta = $this->dir . $fileName;
 
-        if ($archivo['error'] <= 0) {
-            $respuesta = "1";
-            if (!copy($archivo['tmp_name'], $rutaArticulo)) {
-                $respuesta = $rutaArticulo;
-            }
+        if (move_uploaded_file($archivo['tmp_name'], $ruta)) {
+            $respuesta = $ruta;
         }
 
         return $respuesta;
