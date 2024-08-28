@@ -18,7 +18,7 @@ class Persona
         $this->direccion = $datos['direccion'];
         $this->estudios = $datos['estudios'];
         $this->sexo = $datos['sexo'];
-        $this->deportes = $datos['deportes'];
+        $this->deportes = isset($datos['deportes']) ? $datos['deportes'] : [];
     }
 
     public function saludar()
