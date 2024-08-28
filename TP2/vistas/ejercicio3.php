@@ -12,6 +12,9 @@
 </head>
 
 <body class="bg-secondary">
+    <!-- Header -->
+    <?php require_once './estructura/header-ejercicios.php'; ?>
+    <!-- Content -->
     <div class="container" style="margin-top:150px;">
         <div class="row justify-content-center mt-3">
             <div class="col" style="max-width: 400px;">

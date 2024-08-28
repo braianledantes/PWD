@@ -33,6 +33,9 @@ $resultado = $pelicula->crearPelicula($titulo, $actores, $director, $guion, $pro
 </head>
 
 <body>
+    <!-- Header -->
+    <?php require_once '../estructura/header-accion.php'; ?>
+    <!-- Content -->
     <div class="container mt-4">
         <div class="alert alert-success" role="alert">
             <h2 class="alert-heading mb-4">La película introducida es</h2>

@@ -12,7 +12,9 @@
 </head>
 
 <body>
-
+    <!-- Header -->
+    <?php require_once './estructura/header-ejercicios.php'; ?>
+    <!-- Content -->
     <div class="container mt-4">
         <div class="g-3 shadow border">
             <h3 class="bg-dark text-white p-2">Cinem@as</h3>
