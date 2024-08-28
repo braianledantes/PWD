@@ -43,6 +43,7 @@
     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
       <div class="accordion-body">
         <ul class="list-group">
+            <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio1.php">Ejercicio 1</a></li>
             <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio3.php">Ejercicio 3</a></li>
             <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio4.php">Ejercicio 4</a></li>
         </ul>
