@@ -3,8 +3,8 @@
 class Usuarios
 {
     private $usuarios = [
-        'admin' => 'admin',
-        'user' => 'user'
+        'admin' => 'adminadmin123',
+        'user' => 'user1234'
     ];
 
     public function login($username, $password)
