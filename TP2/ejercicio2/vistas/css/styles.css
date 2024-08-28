@@ -1,0 +1,54 @@
+.contenido {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.consigna {
+    background-color: rgb(216, 237, 243);
+    font-family: monospace;
+}
+
+.consigna,
+.solucion,
+.resultado {
+    margin: 1rem 0;
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgb(190, 189, 189)
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+form input,
+form select {
+    padding: 0.5rem;
+}
+
+input{
+    border-radius: 20px;
+}
+
+button {
+    padding: 0.5rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+}
+
+button:hover{
+    font-weight: bold;
+}
+
+button[type="reset"] {
+    background-color: #ccc;
+    color: #000;
+}
