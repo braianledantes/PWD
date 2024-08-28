@@ -120,7 +120,7 @@
 
     <!-- jquery and jquery-validator -->
     <script src="./js/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
 
     <script src="./js/ejercicio3.js"></script>
 </body>
