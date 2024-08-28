@@ -5,11 +5,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TP3 | Ejercicio 1</title>
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
+    <!-- Header -->
+    <?php include_once './estructura/header-ejercicios.php'; ?>
+    <!-- Content -->
     <div class="container d-flex justify-content-center mt-3">
         <div style="width: 600px; max-width: 600px;">
 
@@ -18,7 +23,7 @@
                 <p>Crear un formulario que permita subir un archivo. En la página que procesa la información se debe mostrar un mensaje que indique si el archivo fue subido correctamente o no.</p>
             </div>
 
-            
+
             <form class="border p-3 rounded" action="accion/subirArchivo.php" method="post" enctype="multipart/form-data">
                 <h2 class="mb-3">Solución:</h2>
                 <div class="mb-3">
@@ -29,10 +34,6 @@
             </form>
         </div>
     </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
 </body>
 
 </html>
