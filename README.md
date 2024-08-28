@@ -17,3 +17,10 @@
 
 ## Contenido
 Cada carpeta tiene la solucion de los trabajos prácticos indicados en el enunciado del archivo PDF.
+
+
+## Pruebas
+1. Instalar XAMP.
+2. Copiar el repositorio en la carpeta donde esta instalado XAMP. Por ejemplo `C:\xampp\htdocs`.
+3. Iniciar el servidor de Apache.
+4. Ingresar en el navegador la URL: http://localhost/pwd/.
