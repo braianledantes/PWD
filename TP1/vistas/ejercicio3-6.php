@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+    <?php include_once './estructura/header-ejercicios.php'; ?>
     <div class="contenido">
         <div class="consigna">
             <h2>Ejercicio 3 al 6</h2>

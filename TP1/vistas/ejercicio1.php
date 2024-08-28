@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <?php include_once './estructura/header-ejercicios.php'; ?>
     <div class="contenido">
         <section class="consigna">
             <h1>Ejercicio 1</h1>
