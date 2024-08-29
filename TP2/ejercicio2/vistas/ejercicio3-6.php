@@ -10,7 +10,9 @@
 </head>
 
 <body>
-
+    <!-- Header -->
+    <?php require_once '../vistas/estructura/header-ejercicios.php'; ?>
+    
     <div class="container d-flex justify-content-center mt-3">
         <div style="width: 600px; max-width: 600px;">
             <div class="consigna p-3 border rounded bg-body-secondary">

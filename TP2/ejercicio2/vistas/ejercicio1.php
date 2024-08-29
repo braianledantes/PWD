@@ -11,9 +11,11 @@
 </head>
 
 <body>
+    <!-- Header -->
+    <?php require_once './estructura/header-ejercicios.php'; ?>
     <div class="container">
         <div class="d-flex justify-content-center">
-            <div class="p-3" style="max-width: 600px; background-color: #f8f9fa;">
+            <div class="p-3" >
                 <div class="contenido">
                     <section class="consigna bg-secondary text-white p-3 rounded mb-4">
                         <h1>Ejercicio 1</h1>

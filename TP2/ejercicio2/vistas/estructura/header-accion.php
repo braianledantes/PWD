@@ -27,16 +27,10 @@
               TP2
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../../../TP2/vistas/ejercicio1.php">Ejercicio 1</a></li>
-              <!--Ejercicios del 2-->
-              <li><a class="dropdown-item" href="../../../TP2/ejercicio2/vistas/ejercicio1.php">Ej2 - Ejercicio 1</a></li>
-              <li><a class="dropdown-item" href="../../../TP2/ejercicio2/vistas/ejercicio2.php">Ej2 - Ejercicio 2</a></li>
-              <li><a class="dropdown-item" href="../../../TP2/ejercicio2/vistas/ejercicio3-6.php">Ej2 - Ejercicio 3-6</a></li>
-              <li><a class="dropdown-item" href="../../../TP2/ejercicio2/vistas/ejercicio7.php">Ej2 - Ejercicio 7</a></li>
-              <li><a class="dropdown-item" href="../../../TP2/ejercicio2/vistas/ejercicio8.php">Ej2 - Ejercicio 8</a></li>
-
-              <li><a class="dropdown-item" href="../../../TP2/vistas/ejercicio3.php">Ejercicio 3</a></li>
-              <li><a class="dropdown-item" href="../../../TP2/vistas/ejercicio4.php">Ejercicio 4</a></li>
+              <li><a class="dropdown-item" href="../ejercicio1.php">Ejercicio 1</a></li>
+              <li><a class="dropdown-item" href="../../ejercicio2">Ejercicio 2</a></li>
+              <li><a class="dropdown-item" href="../ejercicio3.php">Ejercicio 3</a></li>
+              <li><a class="dropdown-item" href="../ejercicio4.php">Ejercicio 4</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -44,9 +38,9 @@
               TP3
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="../ejercicio1.php">Ejercicio 1</a></li>
-              <li><a class="dropdown-item" href="../ejercicio2.php">Ejercicio 2</a></li>
-              <li><a class="dropdown-item" href="../ejercicio3.php">Ejercicio 3</a></li>
+              <li><a class="dropdown-item" href="../../../TP3/vistas/ejercicio1.php">Ejercicio 1</a></li>
+              <li><a class="dropdown-item" href="../../../TP3/vistas/ejercicio2.php">Ejercicio 2</a></li>
+              <li><a class="dropdown-item" href="../../../TP3/vistas/ejercicio3.php">Ejercicio 3</a></li>
             </ul>
           </li>
         </ul>

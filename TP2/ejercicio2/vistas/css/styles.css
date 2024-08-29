@@ -1,3 +1,24 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: lightyellow;
+    padding: 1rem 3rem;
+    box-shadow: 0 2px 5px #ccc;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+}
+
 .contenido {
     width: 500px;
     margin: 0 auto;

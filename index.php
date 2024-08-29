@@ -44,6 +44,13 @@
       <div class="accordion-body">
         <ul class="list-group">
             <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio1.php">Ejercicio 1</a></li>
+              <!--Ejercicio 2-->
+              <li class="list-group-item"><a class="dropdown-item" href="TP2/ejercicio2/vistas/ejercicio1.php">Ej2 - Ejercicio 1</a></li>
+              <li class="list-group-item"><a class="dropdown-item" href="TP2/ejercicio2/vistas/ejercicio2.php">Ej2 - Ejercicio 2</a></li>
+              <li class="list-group-item"><a class="dropdown-item" href="TP2/ejercicio2/vistas/ejercicio3-6.php">Ej2 - Ejercicio 3 al 6</a></li>
+              <li class="list-group-item"><a class="dropdown-item" href="TP2/ejercicio2/vistas/ejercicio7.php">Ej2 - Ejercicio 7</a></li>
+              <li class="list-group-item"><a class="dropdown-item" href="TP2/ejercicio2/vistas/ejercicio8.php">Ej2 - Ejercicio 8</a></li>
+
             <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio3.php">Ejercicio 3</a></li>
             <li class="list-group-item"><a class="dropdown-item" href="TP2/vistas/ejercicio4.php">Ejercicio 4</a></li>
         </ul>

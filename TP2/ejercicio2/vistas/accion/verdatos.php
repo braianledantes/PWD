@@ -23,6 +23,8 @@ $cantidadDeDeportes = $persona->cantidadDeDeportes();
 </head>
 
 <body>
+    <!-- Header -->
+    <?php require_once '../estructura/header-accion.php'; ?>
     <div class="container d-flex justify-content-center mt-3">
         <div class="p-3 border rounded bg-body-secondary" style="width: 600px; max-width: 600px;">
             <h2>Resultado:</h2>

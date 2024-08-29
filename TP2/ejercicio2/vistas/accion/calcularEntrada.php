@@ -22,6 +22,8 @@ $precio = $cine->calcularPrecio($esEstudiante, $edad);
 </head>
 
 <body>
+    <!-- Header -->
+    <?php require_once '../estructura/header-accion.php'; ?>
     <div class="contenido d-flex justify-content-center">
         <div class="bg-body-secondary mt-4 border rounded p-3" style="max-width: 600px; min-width:400px;">
             <h2>Resultado:</h2>
