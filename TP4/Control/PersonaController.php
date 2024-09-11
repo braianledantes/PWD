@@ -40,4 +40,28 @@ class PersonaController
             return ['error' => $e->getMessage()];
         }
     }
+
+    public function buscarPersona($dni)
+    {
+        try {
+            $persona = $this->personaDao->getPersona($dni);
+            if ($persona == null) {
+                return ['error' => 'Persona no encontrada'];
+            }
+            return ['persona' => $persona];
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
+
+    public function actualizarPersona($dni, $nombre, $apellido, $fechaNac, $telefono, $domicilio)
+    {
+        try {
+            $persona = new Persona($dni, $apellido, $nombre, $fechaNac, $telefono, $domicilio);
+            $this->personaDao->updatePersona($persona);
+            return ['mensaje' => 'Persona actualizada correctamente'];
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
 }
