@@ -89,4 +89,27 @@ class AutoController
             return ['error' => $e->getMessage()];
         }
     }
+
+    public function crearAuto($patente, $marca, $modelo, $dniDuenio)
+    {
+        try {
+            // verifica si existe la persona
+            $persona = $this->personaDao->getPersona($dniDuenio);
+            if ($persona == null) {
+                return ['error' => "No existe una persona con DNI $dniDuenio"];
+            }
+
+            $auto = new Auto($patente, $marca, $modelo, $dniDuenio);
+            $this->autoDao->insertAuto($auto);
+
+            return ['mensaje' => 'Auto creado correctamente'];
+        } catch (PDOException $e) {
+            if ($e->errorInfo[1] == 1062) {
+                return ['error' => "Ya existe un auto con esa patente $patente"];
+            }
+            return ['error' => 'Error al crear el auto en la base de datos'];
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
 }
