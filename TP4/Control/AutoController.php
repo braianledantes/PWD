@@ -21,7 +21,7 @@ class AutoController
     public function obtenerAutos()
     {
         try {
-            return $this->autoDao->getAutos();
+            return ['autos' => $this->autoDao->getAutos()];
         } catch (Exception $e) {
             return ['error' => $e->getMessage()];
         }
@@ -52,6 +52,19 @@ class AutoController
             }
 
             return $result;
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
+
+    public function buscarAuto($patente)
+    {
+        try {
+            $auto = $this->autoDao->getAuto($patente);
+            if ($auto == null) {
+                return ['error' => 'Auto no encontrado'];
+            }
+            return ['auto' => $auto];
         } catch (Exception $e) {
             return ['error' => $e->getMessage()];
         }
