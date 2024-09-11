@@ -43,7 +43,10 @@ $autosconDuenio = $autoController->obtenerAutosConDuenio();
         </tbody>
     </table>
 
-    <a href="index.php">Volver</a>
+    <h2>Acciones</h2>
+    <a href="./NuevoAuto.php">Crear Auto</a>
+    <a href="./CambioDuenio.php">Cambiar Dueño</a>
+    <a href="./">Volver</a>
 
 </body>
 </html>

@@ -112,4 +112,27 @@ class AutoController
             return ['error' => $e->getMessage()];
         }
     }
+
+    public function cambiarDuenio($patente, $dniDuenio)
+    {
+        try {
+            // verifica si existe la persona
+            $persona = $this->personaDao->getPersona($dniDuenio);
+            if ($persona == null) {
+                return ['error' => "No existe una persona con DNI $dniDuenio"];
+            }
+            // verifica si existe el auto
+            $auto = $this->autoDao->getAuto($patente);
+            if ($auto == null) {
+                return ['error' => 'Auto no encontrado'];
+            }
+            // cambia el dueño del auto
+            $autoActualizado = new Auto($auto->getPatente(), $auto->getMarca(), $auto->getModelo(), $dniDuenio);
+            $this->autoDao->updateAuto($autoActualizado);
+
+            return ['mensaje' => 'Dueño cambiado correctamente'];
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
 }
