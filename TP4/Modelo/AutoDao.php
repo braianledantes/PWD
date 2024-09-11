@@ -61,4 +61,15 @@ class AutoDao
         }
         return $autos;
     }
+
+    public function getAutosSegunDuenio($dniDuenio)
+    {
+        $query = $this->db->prepare('SELECT * FROM auto WHERE dniDuenio = :dniDuenio');
+        $query->execute(['dniDuenio' => $dniDuenio]);
+        $autos = [];
+        foreach ($query as $auto) {
+            $autos[] = new Auto($auto['Patente'], $auto['Marca'], $auto['Modelo'], $auto['DniDuenio']);
+        }
+        return $autos;
+    }
 }

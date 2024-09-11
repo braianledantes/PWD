@@ -69,4 +69,24 @@ class AutoController
             return ['error' => $e->getMessage()];
         }
     }
+
+    public function obtenerAutosSegunDuenio($dniDuenio) {
+        try {
+            $autos = $this->autoDao->getAutosSegunDuenio($dniDuenio);
+            $persona = $this->personaDao->getPersona($dniDuenio);
+
+            $result = [];
+
+            foreach ($autos as $auto) {
+                $result[] = [
+                    'auto' => $auto,
+                    'duenio' => $persona
+                ];
+            }
+
+            return $result;
+        } catch (Exception $e) {
+            return ['error' => $e->getMessage()];
+        }
+    }
 }
