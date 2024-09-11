@@ -74,6 +74,28 @@
       </div>
     </div>
   </div>
+
+  <!--Trabajo Practico Numero 4-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+      Trabajo Práctico #4
+      </button>
+    </h2>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul class="list-group">
+            <li class="list-group-item"><a class="dropdown-item" href="./TP4/Vistas/VerAutos.php">Ver Autos</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="./TP4/Vistas/buscarAuto.php">Buscar Auto</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="./TP4/Vistas/listaPersonas.php">Listar Personas</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="./TP4/Vistas/NuevaPersona.php">Nueva Persona</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="./TP4/Vistas/NuevoAuto.php">Nuevo Auto</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="./TP4/Vistas/CambioDuenio.php">Cambio Dueño de Auto</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="./TP4/Vistas/BuscarPersona.html">Buscar Persona</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
     </section>
 <body>

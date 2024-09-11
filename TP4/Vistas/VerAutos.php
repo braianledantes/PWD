@@ -9,44 +9,48 @@ $autosconDuenio = $autoController->obtenerAutosConDuenio();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Autos | TP4</title>
+
+    <?php include_once './estructura/bootstrap.php'; ?>
 </head>
+
 <body>
-    
-    <h1>Autos</h1>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Patente</th>
-                <th>DNI Dueño</th>
-                <th>Nombre Dueño</th>
-                <th>Apellido Dueño</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php foreach ($autosconDuenio as $auto) : ?>
+    <?php include_once './estructura/header.php'; ?>
+
+    <div class="container">
+        <h1>Listado de Autos</h1>
+
+        <table class="table table-striped border">
+            <thead>
                 <tr>
-                    <td><?= $auto['auto']->getMarca() ?></td>
-                    <td><?= $auto['auto']->getModelo() ?></td>
-                    <td><?= $auto['auto']->getPatente() ?></td>
-                    <td><?= $auto['auto']->getDniDuenio() ?></td>
-                    <td><?= $auto['duenio']->getNombre() ?></td>
-                    <td><?= $auto['duenio']->getApellido() ?></td>
+                    <th>Patente</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>DNI Dueño</th>
+                    <th>Nombre Dueño</th>
+                    <th>Apellido Dueño</th>
                 </tr>
-            <?php endforeach; ?>
-        </tbody>
-    </table>
-
-    <h2>Acciones</h2>
-    <a href="./NuevoAuto.php">Crear Auto</a>
-    <a href="./CambioDuenio.php">Cambiar Dueño</a>
-    <a href="./">Volver</a>
+            </thead>
+            <tbody>
+                <?php foreach ($autosconDuenio as $auto) : ?>
+                    <tr>
+                        <td><?= $auto['auto']->getPatente() ?></td>
+                        <td><?= $auto['auto']->getMarca() ?></td>
+                        <td><?= $auto['auto']->getModelo() ?></td>
+                        <td><?= $auto['auto']->getDniDuenio() ?></td>
+                        <td><?= $auto['duenio']->getNombre() ?></td>
+                        <td><?= $auto['duenio']->getApellido() ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
 
 </body>
+
 </html>
