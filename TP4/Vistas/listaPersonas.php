@@ -46,5 +46,7 @@ $result = $personaController->obtenerPersonas();
         </tbody>
     </table>
 
+    <a href="NuevaPersona.php">Nueva Persona</a>
+
 </body>
 </html>
