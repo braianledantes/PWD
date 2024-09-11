@@ -14,20 +14,26 @@ $result = $autoController->obtenerAutosSegunDuenio($dniDuenio);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autos de persona | TP4</title>
-</head>
-<body>
-    
-    <h2>Autos de la persona con DNI: "<i><?= $dniDuenio ?></i>"</h2>
 
-    <?php if (isset($result['error'])) : ?>
-        <p><strong>Error:</strong> <?= $result['error'] ?></p>
-    <?php else : ?>
-        <table border="1">
+    <?php include_once './estructura/bootstrap.php'; ?>
+</head>
+
+<body>
+
+    <?php include_once './estructura/header.php'; ?>
+    
+    <div class="container">
+        <h2 class="mb-4">Listado de Autos de la persona con DNI: <?= $dniDuenio ?></h2>
+
+        <table class="table table-striped border">
             <thead>
                 <tr>
                     <th>Patente</th>
                     <th>Marca</th>
                     <th>Modelo</th>
+                    <th>DNI Dueño</th>
+                    <th>Nombre Dueño</th>
+                    <th>Apellido Dueño</th>
                 </tr>
             </thead>
             <tbody>
@@ -36,13 +42,14 @@ $result = $autoController->obtenerAutosSegunDuenio($dniDuenio);
                         <td><?= $auto['auto']->getPatente() ?></td>
                         <td><?= $auto['auto']->getMarca() ?></td>
                         <td><?= $auto['auto']->getModelo() ?></td>
+                        <td><?= $auto['auto']->getDniDuenio() ?></td>
+                        <td><?= $auto['duenio']->getNombre() ?></td>
+                        <td><?= $auto['duenio']->getApellido() ?></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>
-    <?php endif; ?>
-
-    <a href="listapersonas.php">Volver</a>
+    </div>
 
 </body>
 </html>
