@@ -29,7 +29,7 @@
                         <a class="nav-link" href="./CambioDuenio.php">Cambio Dueño</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./BuscarPersona.html">Buscar Persona</a>
+                        <a class="nav-link" href="./BuscarPersona.php">Buscar Persona</a>
                     </li>
                 </ul>
             </div>
