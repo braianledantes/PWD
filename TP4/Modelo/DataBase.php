@@ -14,8 +14,8 @@ class DataBase
     public function __construct()
     {
         $this->conn = new PDO('mysql:host=localhost;dbname=infoautos', 'root', '');
-        $this->autoDao = new AutoDao($this->conn);
-        $this->personaDao = new PersonaDao($this->conn);
+        $this->autoDao = new AutoDaoImp($this->conn);
+        $this->personaDao = new PersonaDaoImp($this->conn);
     }
 
     public function getAutoDao()

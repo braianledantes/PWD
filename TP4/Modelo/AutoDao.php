@@ -2,9 +2,22 @@
 require_once 'Auto.php';
 
 /**
+ * Interfaz que define los métodos que debe implementar un DAO de Auto
+ */
+interface AutoDao
+{
+    public function getAuto($patente): Auto | null;
+    public function insertAuto(Auto $auto);
+    public function deleteAuto($patente);
+    public function updateAuto(Auto $auto);
+    public function getAutos();
+    public function getAutosSegunDuenio($dniDuenio);
+}
+
+/**
  * Clase que se encarga de realizar operaciones en la base de datos con la entidad auto
  */
-class AutoDao
+class AutoDaoImp implements AutoDao
 {
     private $db;
 
