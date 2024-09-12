@@ -5,16 +5,17 @@ require_once 'PersonaDao.php';
 /**
  * Clase que representa la base de datos con sus respectivos DAO
  */
-class DataBase extends PDO
+class DataBase
 {
+    private PDO $conn;
     private AutoDao $autoDao;
     private PersonaDao $personaDao;
 
     public function __construct()
     {
-        parent::__construct('mysql:host=localhost;dbname=infoautos', 'root', '');
-        $this->autoDao = new AutoDao($this);
-        $this->personaDao = new PersonaDao($this);
+        $this->conn = new PDO('mysql:host=localhost;dbname=infoautos', 'root', '');
+        $this->autoDao = new AutoDao($this->conn);
+        $this->personaDao = new PersonaDao($this->conn);
     }
 
     public function getAutoDao()
