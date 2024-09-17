@@ -21,20 +21,30 @@ $resultado = $personaController->actualizarPersona($dni, $nombre, $apellido, $fe
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actualizar Persona | TP4</title>
+    <?php include_once './estructura/bootstrap.php'; ?>
 </head>
 
 <body>
 
-    <h1>Actualizar Persona</h1>
+    <?php include_once './estructura/header.php'; ?>
 
-    <?php if (isset($resultado['error'])) : ?>
-        <p><?= $resultado['error'] ?></p>
-    <?php else : ?>
-        <p><?= $resultado['mensaje'] ?></p>
-    <?php endif; ?>
+    <div class="container">
+        <h2 class="mb-4">Actualizar Persona</h2>
 
-    <a href="listaPersonas.php">Volver</a>
+        <?php if (isset($resultado['error'])) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?= $resultado['error'] ?>
+            </div>
+        <?php endif; ?>
 
+        <?php if (isset($resultado['mensaje'])) : ?>
+            <div class="alert alert-success" role="alert">
+                <p><?= $resultado['mensaje'] ?></p>
+            </div>
+        <?php endif; ?>
+
+    </div>
+    
 </body>
 
 </html>

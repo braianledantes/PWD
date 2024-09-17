@@ -15,22 +15,34 @@ $resultado = $personaController->crearPersona($nroDni, $nombre, $apellido, $fech
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Persona | TP4</title>
+    <?php include_once './estructura/bootstrap.php'; ?>
 </head>
+
 <body>
-    
-    <h1>Crear Persona</h1>
 
-    <?php if (isset($resultado['mensaje'])) : ?>
-        <p><?= $resultado['mensaje'] ?></p>
-    <?php else : ?>
-        <p><?= $resultado['error'] ?></p>
-    <?php endif; ?>
+    <?php include_once './estructura/header.php'; ?>
 
-    <a href="NuevaPersona.php">Volver</a>
+    <div class="container">
+        <h2 class="mb-4">Crear Persona</h2>
 
+        <?php if (isset($resultado['error'])) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?= $resultado['error'] ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (isset($resultado['mensaje'])) : ?>
+            <div class="alert alert-success" role="alert">
+                <p><?= $resultado['mensaje'] ?></p>
+            </div>
+        <?php endif; ?>
+
+    </div>
 </body>
+
 </html>

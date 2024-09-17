@@ -17,20 +17,29 @@ $resultado = $autoController->cambiarDuenio($patente, $dniDuenio);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambio Duenño | TP4</title>
+    <?php include_once './estructura/bootstrap.php'; ?>
 </head>
 
 <body>
-    
-    <h1>Cambio de Dueño de Auto</h1>
 
-    <?php if (isset($resultado['error'])) : ?>
-        <p><?= $resultado['error'] ?></p>
-    <?php else : ?>
-        <p>Dueño cambiado correctamente</p>
-    <?php endif; ?>
+    <?php include_once './estructura/header.php'; ?>
 
-    <a href="VerAutos.php">Volver</a>
+    <div class="container">
+        <h2 class="mb-4">Cambio de Dueño de Auto</h2>
 
+        <?php if (isset($resultado['error'])) : ?>
+            <div class="alert alert-danger" role="alert">
+                <?= $resultado['error'] ?>
+            </div>
+        <?php endif; ?>
+
+        <?php if (isset($resultado['mensaje'])) : ?>
+                <div class="alert alert-success" role="alert">
+                    <p><?= $resultado['mensaje'] ?></p>
+                </div>
+        <?php endif; ?>
+
+    </div>
 </body>
 
 </html>
