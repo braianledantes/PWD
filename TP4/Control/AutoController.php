@@ -1,6 +1,4 @@
 <?php
-require_once '../Modelo/DataBase.php';
-require_once '../Modelo/Auto.php';
 
 /**
  * Clase controladora de Auto

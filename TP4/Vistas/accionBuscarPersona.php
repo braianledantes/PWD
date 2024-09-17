@@ -1,5 +1,5 @@
 <?php
-require_once '../Control/PersonaController.php';
+include_once '../configuracion.php';
 
 $personaController = new PersonaController();
 

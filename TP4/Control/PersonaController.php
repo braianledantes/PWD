@@ -1,7 +1,8 @@
 <?php
-require_once '../Modelo/DataBase.php';
-require_once '../Modelo/Persona.php';
 
+/**
+ * Clase controladora de Persona
+ */
 class PersonaController
 {
     private $database;

@@ -1,7 +1,4 @@
 <?php
-require_once 'AutoDao.php';
-require_once 'PersonaDao.php';
-
 /**
  * Clase que representa la base de datos con sus respectivos DAO
  */

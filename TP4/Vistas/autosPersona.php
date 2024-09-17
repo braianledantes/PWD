@@ -1,5 +1,5 @@
 <?php
-require_once '../Control/AutoController.php';
+include_once '../configuracion.php';
 
 $autoController = new AutoController();
 
