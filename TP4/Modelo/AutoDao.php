@@ -6,7 +6,7 @@ require_once 'Auto.php';
  */
 interface AutoDao
 {
-    public function getAuto($patente): Auto | null;
+    public function getAuto($patente);
     public function insertAuto(Auto $auto);
     public function deleteAuto($patente);
     public function updateAuto(Auto $auto);
@@ -26,7 +26,7 @@ class AutoDaoImp implements AutoDao
         $this->db = $db;
     }
 
-    public function getAuto($patente): Auto | null
+    public function getAuto($patente)
     {
         $query = $this->db->prepare('SELECT * FROM auto WHERE patente = :patente');
         $query->execute(['patente' => $patente]);

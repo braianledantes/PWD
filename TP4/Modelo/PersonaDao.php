@@ -6,7 +6,7 @@ require_once 'Persona.php';
  */
 interface PersonaDao
 {
-    public function getPersona($numDni): Persona | null;
+    public function getPersona($numDni);
     public function insertPersona(Persona $persona);
     public function deletePersona($numDni);
     public function updatePersona(Persona $persona);
@@ -25,7 +25,7 @@ class PersonaDaoImp implements PersonaDao
         $this->db = $db;
     }
 
-    public function getPersona($numDni): Persona | null
+    public function getPersona($numDni)
     {
         $query = $this->db->prepare('SELECT * FROM persona WHERE nroDni = :nroDni');
         $query->execute(['nroDni' => $numDni]);
