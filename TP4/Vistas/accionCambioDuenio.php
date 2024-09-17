@@ -1,10 +1,11 @@
 <?php
 include_once '../configuracion.php';
 
+$datos = data_submitted();
 $autoController = new AutoController();
 
-$patente = $_POST['patente'];
-$dniDuenio = $_POST['dniDuenio'];
+$patente = $datos['patente'];
+$dniDuenio = $datos['dniDuenio'];
 
 $resultado = $autoController->cambiarDuenio($patente, $dniDuenio);
 

@@ -1,14 +1,15 @@
 <?php
 include_once '../configuracion.php';
 
+$datos = data_submitted();
 $personaController = new PersonaController();
 
-$dni = $_POST['dni'];
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
-$fechaNac = $_POST['fechaNac'];
-$telefono = $_POST['telefono'];
-$domicilio = $_POST['domicilio'];
+$dni = $datos['dni'];
+$nombre = $datos['nombre'];
+$apellido = $datos['apellido'];
+$fechaNac = $datos['fechaNac'];
+$telefono = $datos['telefono'];
+$domicilio = $datos['domicilio'];
 
 $resultado = $personaController->actualizarPersona($dni, $nombre, $apellido, $fechaNac, $telefono, $domicilio);
 

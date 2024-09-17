@@ -1,12 +1,13 @@
 <?php
 include_once '../configuracion.php';
 
+$datos = data_submitted();
 $autoController = new AutoController();
 
-$patente = $_POST['patente'];
-$marca = $_POST['marca'];
-$modelo = $_POST['modelo'];
-$dniDuenio = $_POST['dniDuenio'];
+$patente = $datos['patente'];
+$marca = $datos['marca'];
+$modelo = $datos['modelo'];
+$dniDuenio = $datos['dniDuenio'];
 
 $resultado = $autoController->crearAuto($patente, $marca, $modelo, $dniDuenio);
 

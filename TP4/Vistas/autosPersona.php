@@ -1,9 +1,10 @@
 <?php
 include_once '../configuracion.php';
 
+$datos = data_submitted();
 $autoController = new AutoController();
 
-$dniDuenio = $_GET['dniDuenio'];
+$dniDuenio = $datos['dniDuenio'];
 $result = $autoController->obtenerAutosSegunDuenio($dniDuenio);
 
 ?>

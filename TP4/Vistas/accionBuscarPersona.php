@@ -1,9 +1,10 @@
 <?php
 include_once '../configuracion.php';
 
+$datos = data_submitted();
 $personaController = new PersonaController();
 
-$dni = $_GET['dni'];
+$dni = $datos['dni'];
 
 $resultado = $personaController->buscarPersona($dni);
 

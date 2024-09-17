@@ -1,9 +1,10 @@
 <?php
 include_once '../configuracion.php';
 
+$datos = data_submitted();
 $autoController = new AutoController();
 
-$patente = $_GET['patente'];
+$patente = $datos['patente'];
 
 $result = $autoController->buscarAuto($patente);
 ?>
