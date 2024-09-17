@@ -124,7 +124,7 @@ class AutoController
             // verifica si existe el auto
             $auto = $this->autoDao->getAuto($patente);
             if ($auto == null) {
-                return ['error' => 'Auto no encontrado'];
+                return ['error' => "Auto con patente '$patente' no encontrado"];
             }
             // cambia el dueño del auto
             $autoActualizado = new Auto($auto->getPatente(), $auto->getMarca(), $auto->getModelo(), $dniDuenio);
