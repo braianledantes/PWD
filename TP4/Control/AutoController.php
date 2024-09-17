@@ -91,21 +91,15 @@ class AutoController
     public function crearAuto($patente, $marca, $modelo, $dniDuenio)
     {
         try {
-            // verifica si existe la persona
-            $persona = $this->personaDao->getPersona($dniDuenio);
-            if ($persona == null) {
-                return ['error' => "No existe una persona con DNI $dniDuenio"];
-            }
-
+            // si no existe la persona se lanza una excepción
+            $this->personaDao->getPersona($dniDuenio);
+            
             $auto = new Auto($patente, $marca, $modelo, $dniDuenio);
+            
+            // se crea el auto
             $this->autoDao->insertAuto($auto);
-
+            
             return ['mensaje' => 'Auto creado correctamente'];
-        } catch (PDOException $e) {
-            if ($e->errorInfo[1] == 1062) {
-                return ['error' => "Ya existe un auto con esa patente $patente"];
-            }
-            return ['error' => 'Error al crear el auto en la base de datos'];
         } catch (Exception $e) {
             return ['error' => $e->getMessage()];
         }
@@ -114,16 +108,11 @@ class AutoController
     public function cambiarDuenio($patente, $dniDuenio)
     {
         try {
-            // verifica si existe la persona
-            $persona = $this->personaDao->getPersona($dniDuenio);
-            if ($persona == null) {
-                return ['error' => "No existe una persona con DNI $dniDuenio"];
-            }
-            // verifica si existe el auto
+            // si no existe la persona se lanza una excepción
+            $this->personaDao->getPersona($dniDuenio);
+            
             $auto = $this->autoDao->getAuto($patente);
-            if ($auto == null) {
-                return ['error' => "Auto con patente '$patente' no encontrado"];
-            }
+            
             // cambia el dueño del auto
             $autoActualizado = new Auto($auto->getPatente(), $auto->getMarca(), $auto->getModelo(), $dniDuenio);
             $this->autoDao->updateAuto($autoActualizado);

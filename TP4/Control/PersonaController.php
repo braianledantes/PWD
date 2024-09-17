@@ -32,11 +32,6 @@ class PersonaController
                 'mensaje' => 'Persona creada correctamente',
                 'persona' => $persona
             ];
-        } catch (PDOException $e) {
-            if ($e->getCode() == 23000) {
-                return ['error' => "Ya existe una persona con DNI $nroDni"];
-            }
-            return ['error' => 'Error al crear la persona en la base de datos'];
         } catch (Exception $e) {
             return ['error' => $e->getMessage()];
         }
@@ -46,9 +41,6 @@ class PersonaController
     {
         try {
             $persona = $this->personaDao->getPersona($dni);
-            if ($persona == null) {
-                return ['error' => 'Persona no encontrada'];
-            }
             return ['persona' => $persona];
         } catch (Exception $e) {
             return ['error' => $e->getMessage()];
