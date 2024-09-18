@@ -8,28 +8,28 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="./">Inicio</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/index.php">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./VerAutos.php">Ver Autos</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/VerAutos.php">Ver Autos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./buscarAuto.php">Buscar Auto</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/buscarAuto.php">Buscar Auto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./listaPersonas.php">Listar Personas</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/listaPersonas.php">Listar Personas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./NuevaPersona.php">Nueva Persona</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/NuevaPersona.php">Nueva Persona</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./NuevoAuto.php">Nuevo Auto</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/NuevoAuto.php">Nuevo Auto</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./CambioDuenio.php">Cambio Dueño</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/CambioDuenio.php">Cambio Dueño</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./BuscarPersona.php">Buscar Persona</a>
+                        <a class="nav-link" href="/PWD/TP4/Vistas/BuscarPersona.php">Buscar Persona</a>
                     </li>
                 </ul>
             </div>

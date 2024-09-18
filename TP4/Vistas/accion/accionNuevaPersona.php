@@ -26,7 +26,7 @@ $resultado = $personaController->crearPersona($nroDni, $nombre, $apellido, $fech
 
 <body>
 
-    <?php include_once '../estructura/header-accion.php'; ?>
+    <?php include_once '../estructura/header.php'; ?>
 
     <div class="container">
         <h2 class="mb-4">Crear Persona</h2>
@@ -42,7 +42,7 @@ $resultado = $personaController->crearPersona($nroDni, $nombre, $apellido, $fech
                 <p><?= $resultado['mensaje'] ?></p>
             </div>
         <?php endif; ?>
-
+        <a href="../index.php">Volver al Menu Principal </a>
     </div>
 </body>
 

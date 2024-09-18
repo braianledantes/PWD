@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Persona | TP4</title>
     <?php include_once './estructura/bootstrap.php'; ?>
+
+    <style>
+        .error {
+            color: #8B0000; /* Rojo vino oscuro */
+            font-style: italic; 
+            font-size: 12px; /* Tamaño de letra 0.9rem */
+        }
+        .invalid {
+            border: 1px solid #8B0000; /* Borde rojo vino oscuro */
+            background-color: rgba(255, 182, 193, 0.5); /* Fondo rosa */
+            box-shadow: 0 0 5px rgba(139, 0, 0, 0.5); /* Efecto difuminado */
+        }
+    </style>
 </head>
 
 <body>
@@ -19,9 +32,10 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <form action="./accion/accionBuscarPersona.php" method="get" style="width: 250px; max-width: 250px;" class="border p-3 rounded">
+                <form id="buscarPersonaForm" action="./accion/accionBuscarPersona.php" method="get" style="width: 250px; max-width: 250px;" class="border p-3 rounded">
                     <label class="form-label" for="dni">DNI:</label>
                     <input class="form-control" type="text" name="dni" id="dni" required>
+                    <label id="dniError" class="error" style="display: none;"></label>
                     <br>
                     <button class="btn btn-primary w-100" type="submit">Buscar</button>
                 </form>
@@ -29,6 +43,37 @@
         </div>
     </div>
 
+    <!-- jquery and jquery-validator -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/jquery.validate.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#dni').on('input', function() {
+                const dni = $(this).val();
+                const dniRegex = /^\d{7,8}$/; // Formato DNI (7 u 8 dígitos)
+
+                // Validar DNI
+                if (!dniRegex.test(dni)) {
+                    $('#dniError').text('El DNI debe tener 7 u 8 dígitos').show();
+                    $(this).addClass('invalid');
+                } else {
+                    $('#dniError').hide(); 
+                    $(this).removeClass('invalid');
+                }
+            });
+
+            $('#buscarPersonaForm').on('submit', function(event) {
+                const dni = $('#dni').val();
+                const dniRegex = /^\d{7,8}$/; // Formato DNI (7 u 8 dígitos)
+
+                // Validar DNI antes de enviar
+                if (!dniRegex.test(dni)) {
+                    event.preventDefault(); // Evitar envío si no es válido
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
