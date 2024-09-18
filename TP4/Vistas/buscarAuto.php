@@ -13,7 +13,7 @@
     <?php include_once './estructura/header.php'; ?>
 
     <div class="container d-flex justify-content-center">
-        <form action="accionBuscarAuto.php" method="get" style="width: 300px; max-width: 600px;" class="border p-3 rounded">
+        <form action="./accion/accionBuscarAuto.php" method="get" style="width: 300px; max-width: 600px;" class="border p-3 rounded">
             <h2 class="mb-3">Buscar Auto</h2>
             <div class="mb-3">
                 <label class="form-label" for="patente">Patente:</label>

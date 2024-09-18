@@ -1,5 +1,5 @@
 <?php
-include_once '../configuracion.php';
+include_once '../../configuracion.php';
 
 $datos = data_submitted();
 $autoController = new AutoController();
@@ -15,12 +15,12 @@ $result = $autoController->buscarAuto($patente);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado Busqueda Auto | TP4</title>
-    <?php include_once './estructura/bootstrap.php'; ?>
+    <?php include_once '../estructura/bootstrap.php'; ?>
 </head>
 
 <body>
 
-    <?php include_once './estructura/header.php'; ?>
+    <?php include_once '../estructura/header.php'; ?>
 
     <div class="container ">
         <h2 class="mb-4">Resultado de la busqueda de auto con patente: <?= $patente ?></h2>

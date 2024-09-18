@@ -1,5 +1,5 @@
 <?php
-include_once '../configuracion.php';
+include_once '../../configuracion.php';
 
 $datos = data_submitted();
 $personaController = new PersonaController();
@@ -17,12 +17,12 @@ $resultado = $personaController->buscarPersona($dni);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Persona | TP4</title>
-    <?php include_once './estructura/bootstrap.php'; ?>
+    <?php include_once '../estructura/bootstrap.php'; ?>
 </head>
 
 <body>
 
-    <?php include_once './estructura/header.php'; ?>
+    <?php include_once '../estructura/header.php'; ?>
 
     <div class="container">
         <div class="row">
@@ -39,7 +39,7 @@ $resultado = $personaController->buscarPersona($dni);
 
                 <?php if (isset($resultado['persona'])) : ?>
                     <div class="col-12 d-flex justify-content-center">
-                <form action="./ActualizarDatosPersona.php" method="post" style="width: 600px; max-width: 600px;" class="border p-3 rounded">
+                <form action="../ActualizarDatosPersona.php" method="post" style="width: 600px; max-width: 600px;" class="border p-3 rounded">
                     <input class="form-control" type="hidden" name="dni" id="dni" value="<?= $resultado['persona']->getNroDni() ?>" required>
                     <div class="row mb-3">
                         <label class="form-label col-sm-2 col-form-label" for="nombre">Nombre:</label>

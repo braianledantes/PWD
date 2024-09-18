@@ -1,15 +1,17 @@
 <?php
-include_once '../configuracion.php';
+include_once '../../configuracion.php';
 
 $datos = data_submitted();
-$autoController = new AutoController();
+$personaController = new PersonaController();
 
-$patente = $datos['patente'];
-$marca = $datos['marca'];
-$modelo = $datos['modelo'];
-$dniDuenio = $datos['dniDuenio'];
+$dni = $datos['dni'];
+$nombre = $datos['nombre'];
+$apellido = $datos['apellido'];
+$fechaNac = $datos['fechaNac'];
+$telefono = $datos['telefono'];
+$domicilio = $datos['domicilio'];
 
-$resultado = $autoController->crearAuto($patente, $marca, $modelo, $dniDuenio);
+$resultado = $personaController->actualizarPersona($dni, $nombre, $apellido, $fechaNac, $telefono, $domicilio);
 
 ?>
 
@@ -19,16 +21,16 @@ $resultado = $autoController->crearAuto($patente, $marca, $modelo, $dniDuenio);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Auto | TP4</title>
-    <?php include_once './estructura/bootstrap.php'; ?>
+    <title>Actualizar Persona | TP4</title>
+    <?php include_once '../estructura/bootstrap.php'; ?>
 </head>
 
 <body>
 
-    <?php include_once './estructura/header.php'; ?>
+    <?php include_once '../estructura/header.php'; ?>
 
     <div class="container">
-        <h2 class="mb-4">Crear Nuevo Auto</h2>
+        <h2 class="mb-4">Actualizar Persona</h2>
 
         <?php if (isset($resultado['error'])) : ?>
             <div class="alert alert-danger" role="alert">
@@ -43,6 +45,7 @@ $resultado = $autoController->crearAuto($patente, $marca, $modelo, $dniDuenio);
         <?php endif; ?>
 
     </div>
+    
 </body>
 
 </html>

@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <form action="accionBuscarPersona.php" method="get" style="width: 250px; max-width: 250px;" class="border p-3 rounded">
+                <form action="./accion/accionBuscarPersona.php" method="get" style="width: 250px; max-width: 250px;" class="border p-3 rounded">
                     <label class="form-label" for="dni">DNI:</label>
                     <input class="form-control" type="text" name="dni" id="dni" required>
                     <br>

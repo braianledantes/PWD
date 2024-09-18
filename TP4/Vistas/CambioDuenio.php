@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <form action="accionCambioDuenio.php" method="post" style="width: 250px; max-width: 250px;" class="border p-3 rounded">
+                <form action="./accion/accionCambioDuenio.php" method="post" style="width: 250px; max-width: 250px;" class="border p-3 rounded">
                     <label class="form-label" for="patente">Patente:</label>
                     <input class="form-control" type="text" name="patente" id="patente" required>
                     <br>

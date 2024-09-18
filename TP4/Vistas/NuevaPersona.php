@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-12 d-flex justify-content-center">
-                <form action="accionNuevaPersona.php" method="post" style="width: 600px; max-width: 600px;" class="border p-3 rounded">
+                <form action="./accion/accionNuevaPersona.php" method="post" style="width: 600px; max-width: 600px;" class="border p-3 rounded">
                     <div class="row mb-3">
                         <label class="form-label col-sm-2 col-form-label" for="dni">DNI:</label>
                         <div class="col-sm-10">
