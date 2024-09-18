@@ -32,6 +32,7 @@
                         <a class="nav-link" href="/PWD/TP4/Vistas/BuscarPersona.php">Buscar Persona</a>
                     </li>
                 </ul>
+                <img class="ms-auto me-3" style="height: 35px; width: auto;" src="https://sipcosystems.com/images/web-application-development.png" alt="PWD">
             </div>
         </div>
     </nav>

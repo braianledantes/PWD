@@ -7,18 +7,7 @@
     <title>Cambio Duenño Auto | TP4</title>
     <?php include_once './estructura/bootstrap.php'; ?>
 
-    <style>
-        .error {
-            color: #8B0000; /* Rojo vino oscuro */
-            font-style:italic; 
-            font-size: 12px; /* Tamaño de letra 0.9rem */
-        }
-        .invalid {
-            border: 1px solid #8B0000; /* Borde rojo vino oscuro */
-            background-color: rgba(255, 182, 193, 0.5); /* Fondo rosa */
-            box-shadow: 0 0 5px rgba(139, 0, 0, 0.5); /* Efecto difuminado */
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>

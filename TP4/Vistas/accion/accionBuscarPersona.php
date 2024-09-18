@@ -39,7 +39,7 @@ $resultado = $personaController->buscarPersona($dni);
 
                 <?php if (isset($resultado['persona'])) : ?>
                     <div class="col-12 d-flex justify-content-center">
-                <form action="../ActualizarDatosPersona.php" method="post" style="width: 600px; max-width: 600px;" class="border p-3 rounded">
+                <form action="ActualizarDatosPersona.php" method="post" style="width: 600px; max-width: 600px;" class="border p-3 rounded">
                     <input class="form-control" type="hidden" name="dni" id="dni" value="<?= $resultado['persona']->getNroDni() ?>" required>
                     <div class="row mb-3">
                         <label class="form-label col-sm-2 col-form-label" for="nombre">Nombre:</label>

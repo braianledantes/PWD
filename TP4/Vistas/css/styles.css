@@ -1,3 +1,51 @@
+/*Menu*/
+#list-example {
+    position: fixed;
+    top: 150; 
+    left: 100; 
+    width: 400px; 
+    height: 100vh; 
+    overflow-y: auto; 
+    z-index: 1000; 
+    border-radius: 15px ;
+}
+
+
+/*Scroll de ejercicios*/
+.list-group-item {
+    padding: 10px;
+    text-decoration: none;
+    color: #000000; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.list-group-item:hover {
+    background-color: #e9ecef; 
+    color: #4e8ccf; 
+    font-weight: bold;
+}
+
+.list-group-item.active {
+    background-color: #9db0e4; 
+    color: white; 
+    font-weight: bold;
+    border: 1px green;
+}
+
+.content {
+    display: none; /* Ocultar por defecto */
+}
+.active {
+    display: block; /* Mostrar cuando está activo */
+}
+
+.scrollspy-example {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 90px;
+}
+
+/*Validaciones*/
 .error {
             color: #8B0000; /* Rojo vino oscuro */
             font-style:italic; 
@@ -9,3 +57,5 @@
             background-color: rgba(255, 182, 193, 0.5); /* Fondo rosa */
             box-shadow: 0 0 5px rgba(139, 0, 0, 0.5); /* Efecto difuminado */
 }
+
+
