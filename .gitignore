@@ -3,3 +3,7 @@ TP-repaso
 TP3/archivos/
 PDO_ABM
 PDO_BaseDatos
+PWD_MVC
+
+composer.lock
+vendor
