@@ -5,9 +5,9 @@ require '../configuracion.php';
 
 use Dotenv\Dotenv;
 
-echo $_SESSION['ROOT'] . "\n";
+echo $GLOBALS['ROOT'] . "\n";
 
-$dotenv = Dotenv::createImmutable($_SESSION['ROOT']);
+$dotenv = Dotenv::createImmutable($GLOBALS['ROOT']);
 $dotenv->load();
 
 $s3_bucket = $_ENV['S3_BUCKET'];
