@@ -8,7 +8,15 @@
     "authors": [
         {
             "name": "Braian Ledantes",
-            "email": "braianledantes@gmail.com"
+            "email": "braian.ledantes@est.fi.uncoma.edu.ar"
+        },
+        {
+            "name": "Clara Pelozo",
+            "email": "clara.pelozo@est.fi.uncoma.edu.ar"
+        },
+        {
+            "name": "Luciana Romano",
+            "email": "luciana.romano@est.fi.uncoma.edu.ar"
         }
     ],
     "require": {
