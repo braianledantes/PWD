@@ -30,8 +30,8 @@ function verEstructura($e)
 spl_autoload_register(function ($class_name) {
     //echo "class ".$class_name ;
     $directorys = array(
-        $_SESSION['ROOT'] . 'Modelo/',
-        $_SESSION['ROOT'] . 'Control/',
+        $GLOBALS['ROOT'] . 'modelo/',
+        $GLOBALS['ROOT'] . 'control/',
         //  $GLOBALS['ROOT'].'util/class/',
     );
 
