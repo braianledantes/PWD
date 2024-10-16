@@ -9,13 +9,19 @@ $title = "TP - Librerias";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
+    <?php include_once './estructura/bootstrap.php'; ?>
 </head>
 
 <body>
-    <h1><?= $title ?></h1>
+<?php include_once './estructura/header.php'; ?>
 
-    <a href="../tests/phpdotenv.php">Test de libreria phpdotenv</a>
-    <a href="../tests/UnitConverter.php">Test de libreria de UnitConverter</a>
+    <h1 style="font-style: italic;"><?= $title ?></h1>
+    <h3 style="font-style: italic; color:lightgrey;">Grupo # 2</h3>
+
+    <h2> Libreria Phpdotenv</h2>
+    <a href="../tests/phpdotenv.php">Ver ejemplo de uso</a>
+    <h2>Libreria UnitConverter</h2>
+    <a href="../tests/UnitConverter.php">Ver ejemplo de uso</a>
 </body>
 
 </html>
