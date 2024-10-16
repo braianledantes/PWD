@@ -10,3 +10,7 @@ $GLOBALS['ROOT'] = $_SERVER['DOCUMENT_ROOT'] . "/PWD/TP-Librerias/";
 require "vendor/autoload.php";
 
 include_once('utiles/funciones.php');
+
+// Carga las variables de entorno
+$dotenv = Dotenv\Dotenv::createImmutable($GLOBALS['ROOT']);
+$dotenv->load();
