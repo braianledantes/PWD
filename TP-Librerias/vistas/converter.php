@@ -25,6 +25,8 @@ include_once '../configuracion.php';
         <option value="in">Pulgadas</option>
         <option value="cm">Centímetros</option>
         <option value="ft">Pies</option>
+        <option value="ft">Metros</option>
+
     </select>
     
     <label for="toUnit">A:</label>
@@ -32,6 +34,7 @@ include_once '../configuracion.php';
         <option value="cm">Centímetros</option>
         <option value="in">Pulgadas</option>
         <option value="ft">Pies</option>
+        <option value="ft">Metros</option>
     </select>
     
     <input type="submit" value="Convertir">
