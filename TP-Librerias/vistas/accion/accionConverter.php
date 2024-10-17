@@ -24,17 +24,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Resultado de Conversión</title>
    <?php include_once '../estructura/bootstrap.php'; ?>
 <body>
-<?php include_once '../estructura/header.php'; ?>
-    <h1>Resultado de la Conversión</h1>
+    <?php include_once '../estructura/header.php'; ?>
 
-    <div>
+    <div class="contenedor mx-auto" style="margin: 40px; width: 80%; max-width: 600px;">
+        <h1>Resultado de la Conversión</h1>
+
         <?php if ($resultado !== null): ?>
             <p>Convertiste <strong><?php echo $valor; ?> <?php echo $desde; ?></strong> a <strong><?php echo $resultado; ?> <?php echo $hasta; ?></strong>.</p>
         <?php else: ?>
             <p>No se pudo obtener el resultado de la conversión.</p>
         <?php endif; ?>
-    </div>
 
-    <a href="../converter.php">Realizar otra conversión</a>
+        <button type="button" class="btn btn-light"> <a href="../converter.php" class="text-decoration-none ext-dark">Realizar otra conversión</a></button>
+
+    </div>
 </body>
 </html>
