@@ -1,14 +1,13 @@
 <?php
 require '../../configuracion.php';
-require '../../tests/UnitConverter.php'; 
+require '../../control/UnitConverter.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener datos del formulario
+
     $valor = $_POST['value'];
     $desde = $_POST['fromUnit'];
     $hasta = $_POST['toUnit'];
 
-    // Crear una instancia de Convertidor
     $convertidor = new Convertidor();
     $resultado = $convertidor->convertir($valor, $desde, $hasta);
 
@@ -23,9 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultado de Conversión</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Estilos opcionales -->
-</head>
+   <?php include_once '../estructura/bootstrap.php'; ?>
 <body>
+<?php include_once '../estructura/header.php'; ?>
     <h1>Resultado de la Conversión</h1>
 
     <div>
