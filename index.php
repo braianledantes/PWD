@@ -98,6 +98,23 @@
     </div>
   </div>
 
+  <!--Trabajo Practico Autenticacion-->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+      Trabajo Práctico Autenticacion
+      </button>
+    </h2>
+    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <ul class="list-group">
+            <li class="list-group-item"><a class="dropdown-item" href="./TP5/Vista/listarUsuario.php">Ver usuarios registrados</a></li>
+            <li class="list-group-item"><a class="dropdown-item" href="./TP-Librerias/vistas/converter.php">Test de libreria de UnitConverter</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <!--Trabajo Practico Librerias-->
   <div class="accordion-item">
     <h2 class="accordion-header">
