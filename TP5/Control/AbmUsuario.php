@@ -1,5 +1,4 @@
 <?php
- include_once '../Modelo/Usuario.php';
 class AbmUsuario {
     private function cargarObjeto($parametro)
     {

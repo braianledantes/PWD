@@ -1,7 +1,5 @@
 <?php
 
-include_once 'conector/BaseDatos.php';
-
 Class Rol{
     private $id_rol;
     private $rol_descipcion;

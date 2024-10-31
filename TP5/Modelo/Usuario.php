@@ -1,5 +1,4 @@
 <?php
-include_once './Conector/BaseDatos.php';
 
 class Usuario{
     private $id_usuario;

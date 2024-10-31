@@ -1,5 +1,4 @@
 <?php
-include_once 'conector/BaseDatos.php';
 
 Class UsuarioRol{
     private $objUsuario;
