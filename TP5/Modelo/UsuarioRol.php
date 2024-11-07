@@ -5,7 +5,7 @@ Class UsuarioRol{
     private $objRol;
     private $mensajeOperacion;
 
-    private function __costruct(){
+    public function __costruct(){
         $this->objUsuario= "";
         $this->objRol = "";
         $this->mensajeOperacion = "";
