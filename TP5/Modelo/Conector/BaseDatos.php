@@ -11,13 +11,14 @@ class BaseDatos extends PDO
     private $conec;
     private $indice;
     private $resultado;
-    // private $cantFilasResultado;
+    private $error;
+    private $sql;
 
     public function __construct()
     {
         $this->engine = 'mysql';
         $this->host = 'localhost';
-        $this->database = 'pwd';
+        $this->database = 'bdautenticacion';
         $this->user = 'root';
         $this->pass = '';
         $this->debug = true;
