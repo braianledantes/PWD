@@ -8,12 +8,12 @@ class Usuario{
     private $us_deshabilitado;
     private $mensajeOperacion;
 
-    private function __construct(){
+    public function __construct(){
         $this->id_usuario = "";
         $this->us_nombre = "";
         $this->us_pass = "";
         $this->us_mail = "";
-        $this->us_deshabilitado = "";
+        $this->us_deshabilitado = NULL;
         $this->mensajeOperacion = "";
     }
 
@@ -88,11 +88,11 @@ class Usuario{
                 while ($row = $base->Registro()) {
                     $objUsuario = new usuario();
                     $objUsuario->setear(
-                        $row['id_usuario'],
-                        $row['usuario_nombre'],
-                        $row['usuario_pass'],
-                        $row['usuario_email'],
-                        $row['usuario_deshabilitado']
+                        $row['idusuario'],
+                        $row['usnombre'],
+                        $row['uspass'],
+                        $row['usmail'],
+                        $row['usdeshabilitado']
                     );
                     array_push($arreglo, $objUsuario);
                 }
@@ -126,7 +126,7 @@ class Usuario{
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "UPDATE usuario SET usuario_nombre = '{$this->getUsNombre()}', usuario_pass = '{$this->getUsPass()}', usmail = '{$this->getUsMail()}', usdeshabilitado = {$this->getUsDeshabilitado()} WHERE idusuario = {$this->getIdUsuario()}";
+        $sql = "UPDATE usuario SET usnombre = '{$this->getUsNombre()}', uspass = '{$this->getUsPass()}', usmail = '{$this->getUsMail()}', usdeshabilitado = {$this->getUsDeshabilitado()} WHERE idusuario = {$this->getIdUsuario()}";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
@@ -160,7 +160,7 @@ class Usuario{
     {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "SELECT * FROM 'usuario' WHERE id_usuario = " . $this->getIdUsuario();
+        $sql = "SELECT * FROM 'usuario' WHERE idusuario = " . $this->getIdUsuario();
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
             if ($res > -1) {

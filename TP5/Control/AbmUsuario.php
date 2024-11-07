@@ -4,7 +4,7 @@ class AbmUsuario {
     {
         $usuario = null;
         if (array_key_exists('idusuario', $parametro) && array_key_exists('usnombre', $parametro) && array_key_exists('uspass', $parametro) && array_key_exists('usmail', $parametro) && array_key_exists('usdeshabilitado', $parametro)) {
-            $usuario = new usuario();
+            $usuario = new Usuario();
             $usuario->setear(
                 $parametro['idusuario'],
                 $parametro['usnombre'],
@@ -59,10 +59,13 @@ class AbmUsuario {
 
     public function modificar($parametro)
     {
+      
         $respuesta = false;
         if ($this->seteadosCamposClaves($parametro)) {
             $objUsuario = $this->buscar($parametro);
+
             $objUsuario = $this->cargarObjeto($parametro);
+
             if ($objUsuario != null && $objUsuario->modificar()) {
                 $respuesta = true;
             }
@@ -96,6 +99,8 @@ class AbmUsuario {
         }
         
         $arreglo = usuario::listar($where);
+        echo "acaAAAAAAAAAA";
+        var_dump($arreglo);
         return $arreglo;
     }
 }

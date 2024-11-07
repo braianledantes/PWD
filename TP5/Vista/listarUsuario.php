@@ -38,23 +38,30 @@ $lista = $abmUsuario->buscar(null);
                 <?php foreach ($lista as $var) : ?>
                     <tr>
                         <td class='text-center'><?= $var->getIdUsuario() ?></td>
-                        <td class='text-center'><?= $var->getUsuarioNombre() ?></td>
-                        <td class='text-center'><?= $var->getUsuarioPassword() ?></td>
-                        <td class='text-center'><?= $var->getUsuarioEmail() ?></td>
+                        <td class='text-center'><?= $var->getUsNombre() ?></td>
+                        <td class='text-center'><?= $var->getUsPass() ?></td>
+                        <td class='text-center'><?= $var->getUsMail() ?></td>
                         <td class='text-center'>
-                            <?= $var->getUsuarioDeshabilitado() ? "<i class='fas fa-check-circle'></i>" : "<i class='fas fa-times-circle'></i>" ?>
+                            <?= $var->getUsDeshabilitado() ? 
+                            "<i class='fas fa-check-circle'></i>" : 
+                            "<i class='fas fa-times-circle'></i>" ?>
                         </td>
                         <td class='text-center'>
-                            <form method='post' action='actualizarUsuario.php' style="display:inline;">
-                                <input name='id_usuario' type='hidden' value='<?= $var->getIdUsuario() ?>'>
+                            <!--Actualizar datos-->
+                            <form method='post' action='./accion/actualizarLogin.php' style="display:inline;">
+                                <input name='idusuario' type='hidden' value='<?= $var->getIdUsuario() ?>'>
                                 <button class='btn btn-warning btn-sm' type='submit'>
-                                    <i class='fas fa-user-edit'></i>
+                                    <i class='fas fa-user-edit'></i> Editar
                                 </button>
                             </form>
-                            <form method='post' action='eliminarUsuario.php' style="display:inline;">
+
+                            <!--Realizar Borrado-->
+                            <form method='post' action='./accion/eliminarLogin.php' style="display:inline;">
                                 <input name='id_usuario' type='hidden' value='<?= $var->getIdUsuario() ?>'>
                                 <button class='btn btn-warning btn-sm' type='submit'>
-                                    <?= $var->getUsuarioDeshabilitado() ? "<i class='fas fa-toggle-on'></i>" : "<i class='fas fa-toggle-off'></i>" ?>
+                                    <?= $var->getUsDeshabilitado() ? 
+                                    "<i class='fas fa-toggle-on'></i> Activar" : 
+                                    "<i class='fas fa-toggle-off'></i> Deshabilitar" ?>
                                 </button>
                             </form>
                         </td>
